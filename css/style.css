@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+body,
+html {   
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    scrollbar-width: none; /* Para Firefox */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem; */
+}
+
+.logo{
+    width: 7rem;
+}
+  
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+section:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Estilos para el ícono de scroll */
+.scroll-icon {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 2.5rem;
+    color: #007bff;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Asegurar que el contenedor tenga la altura correcta */
+[data-scroll-container] {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* custom */
+.custom-shadow {
+    font-size: 2.8rem;
+    color: #333;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+    background-color: transparent;
+    /* Eliminar el fondo blanco */
+    border: none;
+    /* Eliminar cualquier borde */
+}
+
+/* mapa */
+@media (max-width: 576px) {
+    .ratio iframe {
+        height: 200px; /* Ajusta esta altura según sea necesario */
+    }
+}
+/*whatsapp*/
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.8rem; /* Distancia desde la parte inferior de la pantalla */
+    left: 1.8rem;   /* Distancia desde la parte izquierda de la pantalla */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+    background-color: #25d366; /* Color de fondo del botón */
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle un poco de profundidad */
+    width: 4rem; /* Ancho fijo */
+    height: 4rem; /* Altura fija igual al ancho */
+    display: flex; /* Centrar el icono dentro del círculo */
+    align-items: center; /* Centrar el icono verticalmente */
+    justify-content: center; /* Centrar el icono horizontalmente */
+    transition: transform 0.3s ease-in-out; /* Suaviza la animación */
+    animation: bounce 10s infinite; /* Animación de rebote infinita */
+    font-size: 2rem;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Agranda un poco el botón cuando el usuario pasa el mouse por encima */
+}
+
+
+
+/* Definición de la animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px); /* Rebote hacia arriba */
+    }
+    60% {
+        transform: translateY(-5px); /* Rebote hacia arriba */
+    }
+}
+
+/* Ajustes para mobile */
+@media (max-width: 576px) {
+  
+    .navbar-nav {
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro en el menú desplegable */
+        border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */        
+    }
+    
+
+    .nav-link {
+        color: #fff; /* Texto blanco para mejor contraste */
+        padding: 1rem 1.2rem;
+        border-bottom: 1px  solid rgba(255, 255, 255, 0.1); /* Separador sutil entre elementos */
+        
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Efecto hover */
+        color: #ddd;
+        
+    }
+    .navbar-toggler-icon {
+        background-color: transparent;
+        color: #555; /* Cambia el color del icono de la hamburguesa */
+    }
+
+    .navbar-toggler {
+        border: none;
+        outline: none;
+    }
+    .show{
+        height: 100%;
+    }
+
+    .custom-toggler .navbar-toggler-icon {
+        background-color: transparent;
+        color: #555; /* Cambia el color del icono de la hamburguesa */
+    }
+   
+}
+/* Fondo transparente por defecto */
+
+
+/* Fondo para pantallas más grandes (escritorio) */
+
+/* Estilos generales */
+
+
+/* Fondo transparente por defecto */
+.navbar {
+    background-color: transparent; /* Transparente por defecto */
+    padding-top: 0; /* Eliminar el padding superior */
+    padding-bottom: 0; /* Eliminar el padding inferior */
+    height: 5rem; /* Puedes ajustar esta altura según tus necesidades */
+}
+
+/* Fondo para pantallas más grandes (escritorio) */
+@media (min-width: 992px) {
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente solo en escritorio */
+    }
+}
+
+/*mobile*/
+@media (max-width: 768px) {
+    .navbar-brand img {
+      width: 5.2rem;
+    }
+    .scroll-icon {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.5rem !important;
+        animation: bounce 2s infinite;
+    }
+  }
+
